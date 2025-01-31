@@ -288,7 +288,7 @@ func (l *Listener) slotIsExists(ctx context.Context) (bool, error) {
 
 const (
 	protoVersion    = "proto_version '1'"
-	publicationName = "wal-listener"
+	publicationName = "all_changes"
 )
 
 const (
