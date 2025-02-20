@@ -22,7 +22,7 @@ type Event struct {
 
 // SubjectName creates subject name from the prefix, schema and table name. Also using topic map from cfg.
 func (e *Event) SubjectName(cfg *config.Config) string {
-	topic := fmt.Sprintf("%s_%s", e.Schema, e.Table)
+	topic := fmt.Sprintf("%s.%s", e.Schema, e.Table)
 
 	if cfg.Listener.TopicsMap != nil {
 		if t, ok := cfg.Listener.TopicsMap[topic]; ok {
